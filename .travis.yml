@@ -4,9 +4,9 @@ node_js:
 - '0.10'
 deploy:
   provider: opsworks
-  access_key_id: AKIAIT4X4NDGM2WVL6VA
+  access_key_id: AKIAJH2D5IPIRHYJT5IA
   secret_access_key:
-    secure: Hh1kaYc/gefbZra9SYHnK6y27vtbAhiaRxPt+ov82ZYduCAUZXk3ScoMWcLtTsuFhSa0nlWhfDklelZgMU4Q7WwEwn0RK3k+4EHIjlJrjn+WsAWQEGrb1XphufhIw665+h+dpaojfDDu75OOAc/k8OwoEhr4+MhKw7kwJqUc9e4=
+    secure: RIscK8P0r4hTOl9hPKWz4KkB7FOYvKOxolfcyzkWTfv0IxVoCgVtQtDFUv8evyf7snFhzGgROAltEaHfgPPlAt+Ld4TmeqeQJnOdh6XYwl86fGGQ9l5nenmjL4EJbsn3nUOXYza+BCR5LcIaIxXXHRMDP8SIYiUajyPv9V/lMOk=
   app-id: 4b65ba59-f39f-40bf-88d0-93087cacb884
   on:
     branch: master
