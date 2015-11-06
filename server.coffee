@@ -1,6 +1,7 @@
 express      = require 'express'
 morgan       = require 'morgan'
 errorHandler = require 'errorhandler'
+meshbluHealthcheck = require 'express-meshblu-healthcheck'
 bodyParser   = require 'body-parser'
 cors         = require 'cors'
 meshblu      = require 'meshblu'
@@ -15,11 +16,12 @@ catch
     server: process.env.MESHBLU_HOST
     port:   process.env.MESHBLU_PORT
 
-port = process.env.PIN_AUTHENTICATOR_PORT ? 3003
+port = process.env.PIN_AUTHENTICATOR_PORT ? 80
 
 app = express()
 app.use morgan('combined')
 app.use errorHandler()
+app.use meshbluHealthcheck()
 app.use bodyParser.json()
 app.use bodyParser.urlencoded(extended: true)
 app.use cors()
