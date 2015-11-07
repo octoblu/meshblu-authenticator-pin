@@ -1,8 +1,8 @@
 {
   "name": "meshblu-authenticator-pin",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "The first trusted device for meshblu!",
-  "main": "command.coffee",
+  "main": "server.js",
   "directories": {
     "test": "test"
   },
@@ -30,7 +30,7 @@
     "sinon-chai": "^2.6.0"
   },
   "scripts": {
-    "start": "node command.js",
+    "start": "node server.js",
     "test": "mocha"
   },
   "repository": {
