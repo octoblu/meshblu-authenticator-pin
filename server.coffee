@@ -19,9 +19,9 @@ catch
 port = process.env.PIN_AUTHENTICATOR_PORT ? 80
 
 app = express()
-app.use morgan('combined')
-app.use errorHandler()
 app.use meshbluHealthcheck()
+app.use morgan('dev')
+app.use errorHandler()
 app.use bodyParser.json()
 app.use bodyParser.urlencoded(extended: true)
 app.use cors()
@@ -33,6 +33,10 @@ conn.on 'ready', ->
 
   app.listen port, =>
     console.log "listening at localhost:#{port}"
+
+process.on 'SIGTERM', =>
+  console.log 'SIGTERM caught, exiting'
+  process.exit 0
 
 conn.on 'notReady', ->
   console.error "Unable to establish a connection to meshblu"
