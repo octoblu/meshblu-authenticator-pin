@@ -1,6 +1,6 @@
 {
   "name": "meshblu-authenticator-pin",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "The first trusted device for meshblu!",
   "main": "server.js",
   "directories": {
