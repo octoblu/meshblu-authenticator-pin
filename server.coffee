@@ -27,7 +27,7 @@ app.use bodyParser.urlencoded(extended: true)
 app.use cors()
 
 conn = meshblu.createConnection meshbluJSON
-conn.on 'ready', ->
+conn.once 'ready', ->
   routes = new Routes app, meshbluJSON.uuid, conn
   routes.register()
 
